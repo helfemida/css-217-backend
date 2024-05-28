@@ -10,5 +10,4 @@ public class RandomString {
 
 	    return String.format("%06d", number);
 	}
-
 }

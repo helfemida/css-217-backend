@@ -11,8 +11,8 @@ import com.sdu.foodorderingsystem.authmodels.UserSession;
 @Repository
 public interface UserSessionDAO extends JpaRepository<UserSession, Integer> {
 	
-	public Optional<UserSession> findByUserId(Integer userId);
+	Optional<UserSession> findByUserId(Integer userId);
 	
-	public Optional<UserSession> findByUUID(String uuid);
+	Optional<UserSession> findByUUID(String uuid);
 
 }

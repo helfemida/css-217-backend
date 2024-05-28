@@ -10,5 +10,5 @@ import com.sdu.foodorderingsystem.authmodels.SignUpModel;
 @Repository
 public interface SignUpModelDAO extends JpaRepository<SignUpModel, Integer> {
 	
-	public Optional<SignUpModel> findByEmail(String email);
+	Optional<SignUpModel> findByEmail(String email);
 }

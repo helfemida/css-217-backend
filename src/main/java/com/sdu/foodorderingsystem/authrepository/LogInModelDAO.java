@@ -7,6 +7,4 @@ import com.sdu.foodorderingsystem.authmodels.LogInModel;
 
 
 @Repository
-public interface LogInModelDAO extends JpaRepository<LogInModel, Integer>{
-
-}
+public interface LogInModelDAO extends JpaRepository<LogInModel, Integer>{ }

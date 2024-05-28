@@ -6,16 +6,14 @@ import com.sdu.foodorderingsystem.exceptions.ItemException;
 import com.sdu.foodorderingsystem.model.Bill;
 
 public interface BillService {
-	
-	public Bill addBill(Bill bill) throws BillException;
-	
-	public Bill updateBill(Bill bill)throws BillException;
-	
-	public Bill removeBill(Integer billId)throws BillException;
-	
-	public Bill viewBill(Integer billId)throws BillException;
-	
-	public String generateTotalBillById(Integer customerId)throws ItemException, CustomerException;
-	
 
+    Bill addBill(Bill bill) throws BillException;
+
+    Bill updateBill(Bill bill) throws BillException;
+
+    Bill removeBill(Integer billId) throws BillException;
+
+    Bill viewBill(Integer billId) throws BillException;
+
+    String generateTotalBillById(Integer customerId) throws ItemException, CustomerException;
 }

@@ -17,9 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Category {
-	
 	@Id
 	private Integer categoryId;
 	private String categoryName;
-
 }

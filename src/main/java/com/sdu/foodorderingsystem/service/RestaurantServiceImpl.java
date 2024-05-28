@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.sdu.foodorderingsystem.exceptions.RestaurantException;
 import com.sdu.foodorderingsystem.model.Restaurant;
 import com.sdu.foodorderingsystem.repository.RestaurantDAO;
+import java.util.List;
 
 @Service
 public class RestaurantServiceImpl implements RestaurantService{
@@ -15,9 +16,6 @@ public class RestaurantServiceImpl implements RestaurantService{
 	@Autowired
 	RestaurantDAO restDAO;
 
-	
-	
-	
 	@Override
 	public Restaurant addRestaurant(Restaurant restaurant) throws RestaurantException {
 		Optional<Restaurant> opt = restDAO.findById(restaurant.getRestaurantId());
@@ -68,6 +66,11 @@ public class RestaurantServiceImpl implements RestaurantService{
 		}else {
 			throw new RestaurantException("No Restaurant found with ID: "+restaurantId);
 		}
+	}
+	@Override
+	public List<Restaurant> getAll(){
+		List<Restaurant> restaurantList = restDAO.findAll().stream().toList();
+		return restaurantList;
 	}
 
 }

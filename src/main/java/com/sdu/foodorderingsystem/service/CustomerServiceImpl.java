@@ -14,8 +14,6 @@ public class CustomerServiceImpl implements CustomerService {
 	
 	@Autowired
 	CustomerDAO customerDAO;
-	
-
 	@Override
 	public Customer addCustomer(Customer customer) throws CustomerException {
 		Optional<Customer> opt = customerDAO.findById(customer.getCustomerId());

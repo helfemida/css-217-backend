@@ -24,20 +24,15 @@ import lombok.ToString;
 @ToString
 @Entity
 public class Restaurant {
-	
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer restaurantId;
-	private String restaurantName;
-	private String managerName;
-	private String contactNumber;
-	
-	
-	@JsonIgnore
-	@OneToOne(cascade = CascadeType.ALL)
-	private Address address;
-	
-	@OneToMany(targetEntity = Item.class,cascade = CascadeType.ALL)
-	private List<Item> itemList = new ArrayList<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer restaurantId;
+    private String restaurantName;
+    private String managerName;
+    private String contactNumber;
+    @JsonIgnore
+    @OneToOne(cascade = CascadeType.ALL)
+    private Address address;
+    @OneToMany(targetEntity = Item.class, cascade = CascadeType.ALL)
+    private List<Item> itemList = new ArrayList<>();
 }

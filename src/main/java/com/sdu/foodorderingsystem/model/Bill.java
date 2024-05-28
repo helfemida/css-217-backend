@@ -21,16 +21,13 @@ import lombok.ToString;
 @ToString
 @Entity
 public class Bill {
-
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer billId;
 	private LocalDateTime billDate;
 	private Double totalCost;
 	private Integer totalItem;
-	
-	
 	@OneToOne(cascade = CascadeType.ALL)
 	private OrderDetails order;
-	
+
 }
